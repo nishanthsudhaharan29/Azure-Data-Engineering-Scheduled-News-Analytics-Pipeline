@@ -45,6 +45,9 @@ This pipeline is based on Azure-native services and follows a modular, scalable 
 - https://mediastack.com/documentation
 - **Target Countries**: United States, Iran, Israel
 
+![Logo](screenshots/2.png)
+![Logo](screenshots/3.png)
+
 ---
 
 ## Key Features
@@ -61,21 +64,21 @@ This pipeline is based on Azure-native services and follows a modular, scalable 
 
 ### Step 1: Create a Resource Group
 ### Step 2: Create Azure Resources
-
+![Logo](screenshots/4.png)
 1. **Azure Data Lake Storage (ADLS)**
    - Enable hierarchical namespace.
    - Create three containers: `bronze`, `silver`, `gold`.
-
+![Logo](screenshots/5.png)
 2. **Azure Databricks**
    - Create a Databricks workspace using the **Standard LTS** tier.
    - Launch the workspace and create a compute cluster.
    - In Storage Accounts, assign `Storage Blob Data Contributor` role to Databricks' Access Connector.
-
+![Logo](screenshots/6.png)
 3. **Access Connector Setup**
    - Go to `External Data > Credentials` in Databricks.
    - Create a credential using the Resource ID of the Access Connector.
    - Define external locations for `bronze`, `silver`, and `gold`.
-
+![Logo](screenshots/7.png)
 ---
 
 ## Notebook Structure
@@ -85,16 +88,16 @@ Create the following notebooks in Databricks:
 1. **Bronze Notebook**
    - Makes the API call
    - Stores raw data in `bronze` container
-
+![Logo](screenshots/8.png)
 2. **Silver Notebook**
    - Reads from `bronze`
    - Filters articles by country, removes duplicates, and cleans fields
-
+![Logo](screenshots/9.png)
 3. **Gold Notebook**
    - Reads from `silver`
    - Adds metadata fields (e.g., keywords, timestamps)
    - Saves final output to `gold` container
-
+![Logo](screenshots/10.png)
 ---
 
 ## Workflow Automation
@@ -123,17 +126,21 @@ Use **Databricks Workflows** to automate the pipeline:
 
 2. Add a Scheduled Trigger to run every 12 hours.
 
+![Logo](screenshots/11.png)
+![Logo](screenshots/12.png)
 ---
 
 ## Output Structure in ADLS
 
-| Layer   | Path Example                                | Description                        |
-|---------|---------------------------------------------|------------------------------------|
-| Bronze  | `abfss://bronze@<account>.dfs.core.windows.net/news/` | Raw JSON from news API             |
-| Silver  | `abfss://silver@<account>.dfs.core.windows.net/news/` | Filtered and cleaned articles      |
-| Gold    | `abfss://gold@<account>.dfs.core.windows.net/news/`   | Enriched and curated final output  |
+| Layer   | Pa | Description                  |
+|---------|------------------------------------|
+| Bronze  | Raw JSON from news API             |
+| Silver  |Filtered and cleaned articles      |
+| Gold    |Enriched and curated final output  |
 
-
+![Logo](screenshots/13.png)
+![Logo](screenshots/14.png)
+![Logo](screenshots/15.png)
 ---
 
 ## Possible Enhancements
