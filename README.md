@@ -10,7 +10,7 @@ By automating ingestion from a public news API and structuring the data using th
 
 ## Business Case
 
-Access to real-time, structured news is essential during conflict situations for making rapid, informed decisions. Government organizations, non-profits, and intelligence units rely on updated information to assess risks, prioritize responses, and understand public narratives. This pipeline provides daily news updates for high-priority regions, ensuring automation, consistency, and quality in the data. This project enables fast-action to provide help and support people affected by war-damges across Israel, Iran, and United States.
+Access to real-time, structured news is essential during conflict situations for making rapid, informed decisions. Government organizations, non-profits, and intelligence units rely on updated information to assess risks, prioritize responses, and understand public narratives. This pipeline provides daily news updates for high-priority regions, ensuring automation, consistency, and quality in the data. This project enables fast-action to provide help and support people affected by war-damages across Israel, Iran, and United States.
 
 ---
 
