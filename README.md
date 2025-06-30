@@ -15,7 +15,7 @@ Access to real-time, structured news is essential during conflict situations for
 ---
 
 ## Architecture Overview
-![Logo](screenshots/1.png)
+![Logo](screenshots/arcc.png)
 
 This pipeline is based on Azure-native services and follows a modular, scalable architecture:
 
